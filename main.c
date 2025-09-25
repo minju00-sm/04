@@ -5,21 +5,13 @@
 
 int main(int argc, char *argv[]) {
 
-	unsigned int x;
-	int b;
+	int second;
 	
-	printf("input a number : ");
-	scanf("%ui", &x);
+	printf("input a second : ");
+	scanf("%i", &second);
 	
-	for (b=0; x != 0; x >>= 1)
-	{
-		if (x & 1) //x의 2진수 끝자리가 1인지. 참이면 1, 거짓이면 0 
-		{
-			b++;
-		}
-	}
-	
-	printf("The result is : %i\n", b); // b에 x가 가지고 있는 1의 개수가 저장됨 
+	printf("The time for %i is %i : %i : %i", 
+			second, second/3600, (second%3600)/60, second % 60 ); 
 
 	return 0;
 }
